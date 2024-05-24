@@ -29,93 +29,74 @@
           <h3 class="text-lg font-semibold mb-4">STRATEGIC PRIORITIES</h3>
           <ul>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/target-population" class="hover:text-gold"
                 >Job Creation and Entrepreneurship</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/target-population" class="hover:text-gold"
                 >Health and Wellbeing</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/target-population" class="hover:text-gold"
                 >Advocacy and Outreach Through Sports</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/target-population" class="hover:text-gold"
                 >Mobility and Access to Healthcare</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/target-population" class="hover:text-gold"
                 >Prevention, Treatment and Rehabilitation</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/target-population" class="hover:text-gold"
                 >Advocacy and Outreach</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/target-population" class="hover:text-gold"
                 >Skills Development and Capacity Building</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/target-population" class="hover:text-gold"
                 >Chaplaincy, Outreach and Family Values</router-link
               >
             </li>
           </ul>
         </div>
-        <div>
+        
+      </div>
+      <div>
           <h3 class="text-lg font-semibold mb-4">PROGRAMMES & INTERVENTIONS</h3>
           <ul>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
-                >Clergy/Clerics</router-link
+              <router-link to="/youth-development" class="hover:text-gold"
+                >Youth Development</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/orphans" class="hover:text-gold"
                 >Orphans</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/pwd" class="hover:text-gold"
                 >Persons With Disabilities</router-link
               >
             </li>
             <li>
-              <router-link to="/initiatives" class="hover:text-gold"
-                >The Boy Child</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/initiatives" class="hover:text-gold"
+              <router-link to="/widows" class="hover:text-gold"
                 >Widows</router-link
               >
             </li>
           </ul>
         </div>
-      </div>
-      <div>
-        <h3 class="text-lg font-semibold mb-4">ABOUT LINKS</h3>
-        <ul>
-          <li>
-            <router-link to="/mission" class="hover:text-gold"
-              >Our Mission</router-link
-            >
-          </li>
-          <li>
-            <router-link to="/vision" class="hover:text-gold"
-              >Our Vision</router-link
-            >
-          </li>
-        </ul>
-      </div>
       <div>
         <h3 class="text-lg font-semibold mb-4">IMPORTANT LINKS</h3>
         <ul>

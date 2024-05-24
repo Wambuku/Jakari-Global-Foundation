@@ -22,10 +22,17 @@
               class="absolute left-0 mt-2 w-48 bg-white text-black shadow-md"
             >
               <li>
-                <router-link to="/initiative1" class="block px-4 py-2 hover:bg-gray-100">Initiative 1</router-link>
+                <router-link to="/youth-development" class="block px-4 py-2 hover:bg-gray-100">Youth Developement</router-link>
               </li>
               <li>
-                <router-link to="/initiative2" class="block px-4 py-2 hover:bg-gray-100">Initiative 2</router-link>
+                <router-link to="/orphans" class="block px-4 py-2 hover:bg-gray-100">ORPHANS</router-link>
+              </li>
+
+              <li>
+                <router-link to="/pwd" class="block px-4 py-2 hover:bg-gray-100">Person With Disabilities</router-link>
+              </li>
+              <li>
+                <router-link to="/widows" class="block px-4 py-2 hover:bg-gray-100">WIDOWS</router-link>
               </li>
             </ul>
           </li>
@@ -129,12 +136,19 @@
             Initiatives <span>▼</span>
           </div>
           <ul v-if="subMenu.initiatives" class="mt-2 space-y-2">
-            <li>
-              <router-link to="/initiative1" class="block hover:text-gold">Initiative 1</router-link>
-            </li>
-            <li>
-              <router-link to="/initiative2" class="block hover:text-gold">Initiative 2</router-link>
-            </li>
+             <li>
+                <router-link to="/youth-development" class="block px-4 py-2 hover:bg-gray-100">Youth Developement</router-link>
+              </li>
+              <li>
+                <router-link to="/orphans" class="block px-4 py-2 hover:bg-gray-100">ORPHANS</router-link>
+              </li>
+
+              <li>
+                <router-link to="/pwd" class="block px-4 py-2 hover:bg-gray-100">Person With Disabilities</router-link>
+              </li>
+              <li>
+                <router-link to="/widows" class="block px-4 py-2 hover:bg-gray-100">WIDOWS</router-link>
+              </li>
           </ul>
         </li>
         <li>
@@ -177,10 +191,10 @@
               <router-link to="/orphans" class="block hover:text-gold">WHY ORPHANS</router-link>
             </li>
             <li>
-              <router-link to="/boychild" class="block hover:text-gold">WHY BOY CHILD</router-link>
+              <router-link to="/youth-development" class="block hover:text-gold">WHY YOUTHS</router-link>
             </li>
             <li>
-              <router-link to="/pws" class="block hover:text-gold">WHY PERSON WITH DISABILITIES</router-link>
+              <router-link to="/pwd" class="block hover:text-gold">WHY PERSON WITH DISABILITIES</router-link>
             </li>
             <li>
               <router-link to="/widows" class="block hover:text-gold">WHY WIDOWS</router-link>

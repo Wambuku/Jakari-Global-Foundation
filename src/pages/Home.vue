@@ -25,7 +25,7 @@
             >Get Involved</router-link
           >
           <router-link
-            to="/initiative"
+            to="/target-population"
             class="ml-4 text-white underline hover:text-yellow-400"
             >Learn More</router-link
           >
