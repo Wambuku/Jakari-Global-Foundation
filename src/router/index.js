@@ -4,7 +4,7 @@ import About from '../pages/About.vue';
 import Mission from '../pages/Mission.vue';
 import Vision from '../pages/Vision.vue';
 import Initiatives from '../pages/Initiatives.vue';
-import GetInvolved from '../pages/GetInvolved.vue';
+import Gallery from '../pages/Gallery.vue';
 import ImpactStories from '../pages/ImpactStories.vue';
 import Blog from '../pages/Blog.vue';
 import Contact from '../pages/Contact.vue';
@@ -15,7 +15,7 @@ const routes = [
   { path: '/mission', component: Mission },
   { path: '/vision', component: Vision },
   { path: '/initiatives', component: Initiatives },
-  { path: '/involved', component: GetInvolved },
+  { path: '/gallery', component: Gallery },
   { path: '/impact', component: ImpactStories },
   { path: '/blog', component: Blog },
   { path: '/contact', component: Contact },
