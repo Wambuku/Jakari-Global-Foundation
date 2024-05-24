@@ -7,42 +7,33 @@
           <li>
             <router-link to="/" class="hover:text-gold">Home</router-link>
           </li>
+          <li>
+            <router-link to="/about" class="hover:text-gold">About</router-link>
+          </li>
           <li class="relative group">
             <button
-              @click="toggleDropdown('about')"
+              @click="toggleDropdown('initiatives')"
               class="hover:text-gold flex items-center"
             >
-              About <span class="ml-2">▼</span>
+              Initiatives <span class="ml-2">▼</span>
             </button>
             <ul
-              v-if="showDropdowns.about"
+              v-if="showDropdowns.initiatives"
               class="absolute left-0 mt-2 w-48 bg-white text-black shadow-md"
             >
               <li>
-                <router-link
-                  to="/mission"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Our Mission</router-link
-                >
+                <router-link to="/initiative1" class="block px-4 py-2 hover:bg-gray-100">Initiative 1</router-link>
               </li>
               <li>
-                <router-link
-                  to="/vision"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Our Vision</router-link
-                >
+                <router-link to="/initiative2" class="block px-4 py-2 hover:bg-gray-100">Initiative 2</router-link>
               </li>
             </ul>
           </li>
           <li>
-            <router-link to="/initiatives" class="hover:text-gold"
-              >Initiatives</router-link
-            >
+            <router-link to="/gallery" class="hover:text-gold">Gallery</router-link>
           </li>
           <li>
-            <router-link to="/involved" class="hover:text-gold"
-              >Gallery</router-link
-            >
+            <router-link to="/target-population" class="hover:text-gold">Target Population</router-link>
           </li>
           <li class="relative group">
             <button
@@ -56,18 +47,10 @@
               class="absolute left-0 mt-2 w-48 bg-white text-black shadow-md"
             >
               <li>
-                <router-link
-                  to="/impact1"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Story 1</router-link
-                >
+                <router-link to="/impact1" class="block px-4 py-2 hover:bg-gray-100">Story 1</router-link>
               </li>
               <li>
-                <router-link
-                  to="/impact2"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Story 2</router-link
-                >
+                <router-link to="/impact2" class="block px-4 py-2 hover:bg-gray-100">Story 2</router-link>
               </li>
             </ul>
           </li>
@@ -83,41 +66,27 @@
               class="absolute left-0 mt-2 space-y-6 w-48 bg-white text-black shadow-md"
             >
               <li>
-                <router-link to="/jgf" class="block hover:text-gold"
-                  >Jakari Global Foundation|What it entails?</router-link
-                >
+                <router-link to="/jgf" class="block hover:text-gold">Jakari Global Foundation|What it entails?</router-link>
               </li>
               <li>
-                <router-link to="/currentevents" class="block hover:text-gold"
-                  >CURRENT EVENTS</router-link
-                >
+                <router-link to="/currentevents" class="block hover:text-gold">CURRENT EVENTS</router-link>
               </li>
               <li>
-                <router-link to="/orphans" class="block hover:text-gold"
-                  >WHY ORPHANS</router-link
-                >
+                <router-link to="/orphans" class="block hover:text-gold">WHY ORPHANS</router-link>
               </li>
               <li>
-                <router-link to="/boychild" class="block hover:text-gold"
-                  >WHY BOY CHILD</router-link
-                >
+                <router-link to="/boychild" class="block hover:text-gold">WHY BOY CHILD</router-link>
               </li>
               <li>
-                <router-link to="pws" class="block hover:text-gold"
-                  >WHY PERSON WITH DISABILITIES</router-link
-                >
+                <router-link to="/pws" class="block hover:text-gold">WHY PERSON WITH DISABILITIES</router-link>
               </li>
               <li>
-                <router-link to="/widows" class="block hover:text-gold"
-                  >WHY WIDOWS</router-link
-                >
+                <router-link to="/widows" class="block hover:text-gold">WHY WIDOWS</router-link>
               </li>
             </ul>
           </li>
           <li>
-            <router-link to="/contact" class="hover:text-gold"
-              >Contact</router-link
-            >
+            <router-link to="/contact" class="hover:text-gold">Contact</router-link>
           </li>
         </ul>
       </div>
@@ -125,8 +94,7 @@
         <router-link
           to="/contact"
           class="bg-gold text-black px-4 py-2 rounded hover:bg-yellow-400"
-          >Get Involved</router-link
-        >
+        >Get Involved</router-link>
         <button class="md:hidden" @click="toggleMobileMenu">
           <svg
             class="w-6 h-6"
@@ -151,34 +119,29 @@
           <router-link to="/" class="block hover:text-gold">Home</router-link>
         </li>
         <li>
+          <router-link to="/about" class="block hover:text-gold">About</router-link>
+        </li>
+        <li>
           <div
-            @click="toggleSubMenu('about')"
+            @click="toggleSubMenu('initiatives')"
             class="flex justify-between items-center cursor-pointer"
           >
-            About <span>▼</span>
+            Initiatives <span>▼</span>
           </div>
-          <ul v-if="subMenu.about" class="mt-2 space-y-2">
+          <ul v-if="subMenu.initiatives" class="mt-2 space-y-2">
             <li>
-              <router-link to="/mission" class="block hover:text-gold"
-                >Our Mission</router-link
-              >
+              <router-link to="/initiative1" class="block hover:text-gold">Initiative 1</router-link>
             </li>
             <li>
-              <router-link to="/vision" class="block hover:text-gold"
-                >Our Vision</router-link
-              >
+              <router-link to="/initiative2" class="block hover:text-gold">Initiative 2</router-link>
             </li>
           </ul>
         </li>
         <li>
-          <router-link to="/initiatives" class="block hover:text-gold"
-            >Initiatives</router-link
-          >
+          <router-link to="/gallery" class="block hover:text-gold">Gallery</router-link>
         </li>
         <li>
-          <router-link to="/involved" class="block hover:text-gold"
-            >Get Involved</router-link
-          >
+          <router-link to="/target-population" class="block hover:text-gold">Target Population</router-link>
         </li>
         <li>
           <div
@@ -189,14 +152,10 @@
           </div>
           <ul v-if="subMenu.impact" class="mt-2 space-y-2">
             <li>
-              <router-link to="/impact1" class="block hover:text-gold"
-                >Story 1</router-link
-              >
+              <router-link to="/impact1" class="block hover:text-gold">Story 1</router-link>
             </li>
             <li>
-              <router-link to="/impact2" class="block hover:text-gold"
-                >Story 2</router-link
-              >
+              <router-link to="/impact2" class="block hover:text-gold">Story 2</router-link>
             </li>
           </ul>
         </li>
@@ -209,48 +168,33 @@
           </div>
           <ul v-if="subMenu.blog" class="mt-2 space-y-6">
             <li>
-                <router-link to="/jgf" class="block hover:text-gold"
-                  >Jakari Global Foundation|What it entails?</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/currentevents" class="block hover:text-gold"
-                  >CURRENT EVENTS</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/orphans" class="block hover:text-gold"
-                  >WHY ORPHANS</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/boychild" class="block hover:text-gold"
-                  >WHY BOY CHILD</router-link
-                >
-              </li>
-              <li>
-                <router-link to="pws" class="block hover:text-gold"
-                  >WHY PERSON WITH DISABILITIES</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/widows" class="block hover:text-gold"
-                  >WHY WIDOWS</router-link
-                >
-              </li>
+              <router-link to="/jgf" class="block hover:text-gold">Jakari Global Foundation|What it entails?</router-link>
+            </li>
+            <li>
+              <router-link to="/currentevents" class="block hover:text-gold">CURRENT EVENTS</router-link>
+            </li>
+            <li>
+              <router-link to="/orphans" class="block hover:text-gold">WHY ORPHANS</router-link>
+            </li>
+            <li>
+              <router-link to="/boychild" class="block hover:text-gold">WHY BOY CHILD</router-link>
+            </li>
+            <li>
+              <router-link to="/pws" class="block hover:text-gold">WHY PERSON WITH DISABILITIES</router-link>
+            </li>
+            <li>
+              <router-link to="/widows" class="block hover:text-gold">WHY WIDOWS</router-link>
+            </li>
           </ul>
         </li>
         <li>
-          <router-link to="/contact" class="block hover:text-gold"
-            >Contact</router-link
-          >
+          <router-link to="/contact" class="block hover:text-gold">Contact</router-link>
         </li>
         <li>
           <router-link
             to="/donate"
             class="block bg-gold text-black px-4 py-2 rounded hover:bg-yellow-400"
-            >Donate</router-link
-          >
+          >Donate</router-link>
         </li>
       </ul>
     </div>
@@ -262,12 +206,12 @@ import { ref } from "vue";
 
 const showMobileMenu = ref(false);
 const subMenu = ref({
-  about: false,
+  initiatives: false,
   impact: false,
   blog: false,
 });
 const showDropdowns = ref({
-  about: false,
+  initiatives: false,
   impact: false,
   blog: false,
 });
