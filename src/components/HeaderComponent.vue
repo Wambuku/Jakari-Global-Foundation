@@ -80,22 +80,38 @@
             </button>
             <ul
               v-if="showDropdowns.blog"
-              class="absolute left-0 mt-2 w-48 bg-white text-black shadow-md"
+              class="absolute left-0 mt-2 space-y-6 w-48 bg-white text-black shadow-md"
             >
-              <li>
-                <router-link
-                  to="/blog1"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Blog Post 1</router-link
-                >
-              </li>
-              <li>
-                <router-link
-                  to="/blog2"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >Blog Post 2</router-link
-                >
-              </li>
+            <li>
+              <router-link to="/blog1" class="block hover:text-gold"
+                >Jakari Global Foundation|What it entails?</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog2" class="block hover:text-gold"
+                >CURRENT EVENTS</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog3" class="block hover:text-gold"
+                >WHY ORPHANS</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog4" class="block hover:text-gold"
+                >WHY BOY CHILD</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog5" class="block hover:text-gold"
+                >WHY PERSON WITH DISABILITIES</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog6" class="block hover:text-gold"
+                >WHY WIDOWS</router-link
+              >
+            </li>
             </ul>
           </li>
           <li>
@@ -191,15 +207,35 @@
           >
             Blog <span>▼</span>
           </div>
-          <ul v-if="subMenu.blog" class="mt-2 space-y-2">
+          <ul v-if="subMenu.blog" class="mt-2 space-y-6">
             <li>
               <router-link to="/blog1" class="block hover:text-gold"
-                >Blog Post 1</router-link
+                >Jakari Global Foundation|What it entails?</router-link
               >
             </li>
             <li>
               <router-link to="/blog2" class="block hover:text-gold"
-                >Blog Post 2</router-link
+                >Current Events</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog3" class="block hover:text-gold"
+                >WHY ORPHANS</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog4" class="block hover:text-gold"
+                >WHY BOY CHILD</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog5" class="block hover:text-gold"
+                >WHY PERSON WITH DISABILITIES</router-link
+              >
+            </li>
+            <li>
+              <router-link to="/blog6" class="block hover:text-gold"
+                >WHY WIDOWS</router-link
               >
             </li>
           </ul>
