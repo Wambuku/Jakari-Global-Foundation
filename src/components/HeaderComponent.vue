@@ -82,36 +82,36 @@
               v-if="showDropdowns.blog"
               class="absolute left-0 mt-2 space-y-6 w-48 bg-white text-black shadow-md"
             >
-            <li>
-              <router-link to="/blog1" class="block hover:text-gold"
-                >Jakari Global Foundation|What it entails?</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog2" class="block hover:text-gold"
-                >CURRENT EVENTS</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog3" class="block hover:text-gold"
-                >WHY ORPHANS</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog4" class="block hover:text-gold"
-                >WHY BOY CHILD</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog5" class="block hover:text-gold"
-                >WHY PERSON WITH DISABILITIES</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog6" class="block hover:text-gold"
-                >WHY WIDOWS</router-link
-              >
-            </li>
+              <li>
+                <router-link to="/jgf" class="block hover:text-gold"
+                  >Jakari Global Foundation|What it entails?</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/currentevents" class="block hover:text-gold"
+                  >CURRENT EVENTS</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/orphans" class="block hover:text-gold"
+                  >WHY ORPHANS</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/boychild" class="block hover:text-gold"
+                  >WHY BOY CHILD</router-link
+                >
+              </li>
+              <li>
+                <router-link to="pws" class="block hover:text-gold"
+                  >WHY PERSON WITH DISABILITIES</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/widows" class="block hover:text-gold"
+                  >WHY WIDOWS</router-link
+                >
+              </li>
             </ul>
           </li>
           <li>
@@ -209,35 +209,35 @@
           </div>
           <ul v-if="subMenu.blog" class="mt-2 space-y-6">
             <li>
-              <router-link to="/blog1" class="block hover:text-gold"
-                >Jakari Global Foundation|What it entails?</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog2" class="block hover:text-gold"
-                >Current Events</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog3" class="block hover:text-gold"
-                >WHY ORPHANS</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog4" class="block hover:text-gold"
-                >WHY BOY CHILD</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog5" class="block hover:text-gold"
-                >WHY PERSON WITH DISABILITIES</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/blog6" class="block hover:text-gold"
-                >WHY WIDOWS</router-link
-              >
-            </li>
+                <router-link to="/jgf" class="block hover:text-gold"
+                  >Jakari Global Foundation|What it entails?</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/currentevents" class="block hover:text-gold"
+                  >CURRENT EVENTS</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/orphans" class="block hover:text-gold"
+                  >WHY ORPHANS</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/boychild" class="block hover:text-gold"
+                  >WHY BOY CHILD</router-link
+                >
+              </li>
+              <li>
+                <router-link to="pws" class="block hover:text-gold"
+                  >WHY PERSON WITH DISABILITIES</router-link
+                >
+              </li>
+              <li>
+                <router-link to="/widows" class="block hover:text-gold"
+                  >WHY WIDOWS</router-link
+                >
+              </li>
           </ul>
         </li>
         <li>
