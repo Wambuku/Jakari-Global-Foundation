@@ -35,12 +35,6 @@
                   >ORPHANS</router-link
                 >
               </li>
-
-              <li>
-                <router-link to="/pwd" class="block px-4 py-2 hover:bg-gray-100"
-                  >Person With Disabilities</router-link
-                >
-              </li>
               <li>
                 <router-link
                   to="/widows"
@@ -94,11 +88,6 @@
               <li>
                 <router-link to="/boychild" class="block hover:text-gold"
                   >WHY BOY CHILD</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/pws" class="block hover:text-gold"
-                  >WHY PERSON WITH DISABILITIES</router-link
                 >
               </li>
               <li>
@@ -171,12 +160,6 @@
                 >ORPHANS</router-link
               >
             </li>
-
-            <li>
-              <router-link to="/pwd" class="block px-4 py-2 hover:bg-gray-100"
-                >Person With Disabilities</router-link
-              >
-            </li>
             <li>
               <router-link
                 to="/widows"
@@ -227,11 +210,6 @@
             <li>
               <router-link to="/youth-development" class="block hover:text-gold"
                 >WHY YOUTHS</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/pwd" class="block hover:text-gold"
-                >WHY PERSON WITH DISABILITIES</router-link
               >
             </li>
             <li>

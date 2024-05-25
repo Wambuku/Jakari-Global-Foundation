@@ -8,8 +8,7 @@ import ImpactStories from "../pages/ImpactStories.vue";
 import Blog from "../pages/Blog.vue";
 import JGF from "../pages/JGF.vue";
 import CurrentEvents from "../pages/CurrentEvents.vue";
-import Orphans from '../pages/Orphans.vue'; 
-import PersonWithDisability from '../pages/PersonWithDisability.vue'; 
+import Orphans from '../pages/Orphans.vue';  
 import  Widows from "../pages/Widows.vue"
 import Contact from "../pages/Contact.vue";
 
@@ -25,7 +24,6 @@ const routes = [
   { path: "/jgf", component: JGF },
   { path: "/currentevents", component: CurrentEvents },
   { path: '/orphans', component: Orphans }, 
-  { path: '/pwd', component: PersonWithDisability }, 
   { path: '/widows', component: Widows }
 ];
 
