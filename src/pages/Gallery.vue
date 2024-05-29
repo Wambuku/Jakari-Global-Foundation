@@ -29,17 +29,17 @@
   <script setup>
   import { ref } from 'vue';
   import image1 from '../assests/story3.jpeg';
-  import image2 from '../assests/story3.jpeg';
-  import image3 from '../assests/story3.jpeg';
-  import image4 from '../assests/story3.jpeg';
-  import image5 from '../assests/story3.jpeg';;
-  import image6 from '../assests/story3.jpeg';
-  import image7 from '../assests/story3.jpeg';
-  import image8 from '../assests/story3.jpeg';
-  import image9 from '../assests/story3.jpeg';
-  import image10 from '../assests/story3.jpeg';
-  import image11 from '../assests/story3.jpeg';
-  import image12 from '../assests/story3.jpeg';
+  import image2 from '../assests/health1.jpeg';
+  import image3 from '../assests/empower.jpeg';
+  import image4 from '../assests/impact1.jpeg';
+  import image5 from '../assests/widows.jpeg';;
+  import image6 from '../assests/vocational-training.jpg';
+  import image7 from '../assests/scholarship.jpg';
+  import image8 from '../assests/orphans.jpeg';
+  import image9 from '../assests/story2.jpeg';
+  import image10 from '../assests/mentorship.jpg';
+  import image11 from '../assests/story1.jpeg';
+  import image12 from '../assests/mentorship-impact.jpg';
   
   const images = ref([
     { id: 1, src: image1, alt: 'Image 1' },

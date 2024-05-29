@@ -86,11 +86,6 @@
               >
             </li>
             <li>
-              <router-link to="/pwd" class="hover:text-gold"
-                >Persons With Disabilities</router-link
-              >
-            </li>
-            <li>
               <router-link to="/widows" class="hover:text-gold"
                 >Widows</router-link
               >

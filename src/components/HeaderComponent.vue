@@ -25,7 +25,7 @@
                 <router-link
                   to="/youth-development"
                   class="block px-4 py-2 hover:bg-gray-100"
-                  >Youth Developement</router-link
+                  >YOUTHS</router-link
                 >
               </li>
               <li>
@@ -55,10 +55,10 @@
             >
           </li>
           <li>
-          <router-link to="/impact" class="block hover:text-gold"
-            >Impact Stories</router-link
-          >
-        </li>
+            <router-link to="/impact" class="block hover:text-gold"
+              >Impact Stories</router-link
+            >
+          </li>
           <li class="relative group">
             <button
               @click="toggleDropdown('blog')"
@@ -87,7 +87,7 @@
               </li>
               <li>
                 <router-link to="/boychild" class="block hover:text-gold"
-                  >WHY BOY CHILD</router-link
+                  >WHY YOUTHS</router-link
                 >
               </li>
               <li>
