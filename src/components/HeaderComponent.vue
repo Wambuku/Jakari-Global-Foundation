@@ -86,7 +86,7 @@
                 >
               </li>
               <li>
-                <router-link to="/boychild" class="block hover:text-gold"
+                <router-link to="/youth-development" class="block hover:text-gold"
                   >WHY YOUTHS</router-link
                 >
               </li>
