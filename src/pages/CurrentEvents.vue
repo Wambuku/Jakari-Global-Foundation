@@ -52,7 +52,7 @@
   const itemsToShow = ref(10);
   const events = ref([
     {
-      name: 'Atelier des Parties Prenantes de YouthMap',
+      name: 'Youth  Development  Gathering ',
       dates: 'Nov 15, 2011',
       agendaLink: '/agenda/youthmap',
       resourcesLink: '/resources/youthmap'
