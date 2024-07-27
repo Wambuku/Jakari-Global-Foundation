@@ -38,7 +38,7 @@
       <div class="container mx-auto flex flex-col md:flex-row items-center">
         <div class="md:w-1/2">
           <img
-            src="../assests/directors.jpeg"
+            src="../assests/director.png"
             alt="Dr. Director name"
             class="w-full rounded-lg shadow-lg"
           />

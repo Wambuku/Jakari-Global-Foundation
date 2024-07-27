@@ -1,5 +1,5 @@
 <template>
-  <header class="fixed w-full bg-gray-800 text-white z-10">
+  <header class="fixed w-full bg-transparent text-white z-10">
     <nav class="container mx-auto flex justify-between items-center p-4">
       <div class="flex items-center space-x-4">
         <img src="../assests/logo.jpeg" alt="Logo" class="h-10" />
