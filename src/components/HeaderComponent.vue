@@ -1,236 +1,118 @@
 <template>
-  <header class="fixed w-full bg-transparent text-white z-10">
+  <header class="fixed top-0 left-0 w-full z-50 backdrop-blur-lg bg-white/10 text-white">
     <nav class="container mx-auto flex justify-between items-center p-4">
-      <div class="flex items-center space-x-4">
-        <img src="../assests/logo.jpeg" alt="Logo" class="h-10" />
-        <ul class="hidden md:flex space-x-6">
-          <li>
-            <router-link to="/" class="hover:text-gold">Home</router-link>
-          </li>
-          <li>
-            <router-link to="/about" class="hover:text-gold">About</router-link>
-          </li>
-          <li class="relative group">
-            <button
-              @click="toggleDropdown('initiatives')"
-              class="hover:text-gold flex items-center"
-            >
-              Initiatives <span class="ml-2">▼</span>
-            </button>
-            <ul
-              v-if="showDropdowns.initiatives"
-              class="absolute left-0 mt-2 w-48 bg-white text-black shadow-md"
-            >
-              <li>
-                <router-link
-                  to="/youth-development"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >YOUTHS</router-link
-                >
-              </li>
-              <li>
-                <router-link
-                  to="/orphans"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >ORPHANS</router-link
-                >
-              </li>
-              <li>
-                <router-link
-                  to="/widows"
-                  class="block px-4 py-2 hover:bg-gray-100"
-                  >WIDOWS</router-link
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <router-link to="/gallery" class="hover:text-gold"
-              >Gallery</router-link
-            >
-          </li>
-          <li>
-            <router-link to="/target-population" class="hover:text-gold"
-              >Target Population</router-link
-            >
-          </li>
-          <li>
-            <router-link to="/impact" class="block hover:text-gold"
-              >Impact Stories</router-link
-            >
-          </li>
-          <li class="relative group">
-            <button
-              @click="toggleDropdown('blog')"
-              class="hover:text-gold flex items-center"
-            >
-              Blog <span class="ml-2">▼</span>
-            </button>
-            <ul
-              v-if="showDropdowns.blog"
-              class="absolute left-0 mt-2 space-y-6 w-48 bg-white text-black shadow-md"
-            >
-              <li>
-                <router-link to="/jgf" class="block hover:text-gold"
-                  >Jakari Global Foundation|What it entails?</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/currentevents" class="block hover:text-gold"
-                  >CURRENT EVENTS</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/orphans" class="block hover:text-gold"
-                  >WHY ORPHANS</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/youth-development" class="block hover:text-gold"
-                  >WHY YOUTHS</router-link
-                >
-              </li>
-              <li>
-                <router-link to="/widows" class="block hover:text-gold"
-                  >WHY WIDOWS</router-link
-                >
-              </li>
-            </ul>
-          </li>
-          <li>
-            <router-link to="/contact" class="hover:text-gold"
-              >Contact</router-link
-            >
-          </li>
-        </ul>
-      </div>
-      <div class="flex items-center space-x-4">
-        <router-link
-          to="/contact"
-          class="bg-gold text-black px-4 py-2 rounded hover:bg-yellow-400"
-          >Get Involved</router-link
-        >
-        <button class="md:hidden" @click="toggleMobileMenu">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
+      <!-- Logo -->
+ 
+      <div class="flex items-center gap-4">
+          <img src="../assests/logo.png" alt="Logo" class="h-14 w-14 object-cover rounded-full shadow-md" />
+        </div>
+
+      
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-8 items-center font-medium">
+        <li>
+          <router-link to="/" class="hover:text-yellow-400 transition">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/about" class="hover:text-yellow-400 transition">About</router-link>
+        </li>
+        <!-- Initiatives Dropdown -->
+        <li class="relative group">
+          <button @click="toggleDropdown('initiatives')" class="flex items-center gap-1 hover:text-yellow-400 transition">
+            Initiatives
+            <span class="text-xs">▼</span>
+          </button>
+          <ul v-if="showDropdowns.initiatives" class="absolute top-10 left-0 bg-white text-black shadow-lg rounded-md py-2 w-52">
+            <li v-for="item in initiativesLinks" :key="item.name">
+              <router-link :to="item.link" class="block px-4 py-2 hover:bg-gray-100 transition">{{ item.name }}</router-link>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <router-link to="/gallery" class="hover:text-yellow-400 transition">Gallery</router-link>
+        </li>
+
+        <li>
+          <router-link to="/target-population" class="hover:text-yellow-400 transition">Target Population</router-link>
+        </li>
+
+        <li>
+          <router-link to="/impact" class="hover:text-yellow-400 transition">Impact Stories</router-link>
+        </li>
+
+        <!-- Blog Dropdown -->
+        <li class="relative group">
+          <button @click="toggleDropdown('blog')" class="flex items-center gap-1 hover:text-yellow-400 transition">
+            Blog
+            <span class="text-xs">▼</span>
+          </button>
+          <ul v-if="showDropdowns.blog" class="absolute top-10 left-0 bg-white text-black shadow-lg rounded-md py-2 w-64 space-y-1">
+            <li v-for="item in blogLinks" :key="item.name">
+              <router-link :to="item.link" class="block px-4 py-2 hover:bg-gray-100 transition">{{ item.name }}</router-link>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <router-link to="/contact" class="hover:text-yellow-400 transition">Contact</router-link>
+        </li>
+      </ul>
+
+      <!-- Action Buttons -->
+      <div class="flex items-center gap-4">
+        <router-link to="/contact" class="bg-yellow-400 text-black px-4 py-2 rounded-full hover:bg-yellow-500 transition">
+          Get Involved
+        </router-link>
+
+        <!-- Mobile Menu Button -->
+        <button class="md:hidden focus:outline-none" @click="toggleMobileMenu">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
           </svg>
         </button>
       </div>
     </nav>
-    <div v-if="showMobileMenu" class="md:hidden bg-gray-800 text-white p-4">
-      <ul class="space-y-4">
-        <li>
-          <router-link to="/" class="block hover:text-gold">Home</router-link>
-        </li>
-        <li>
-          <router-link to="/about" class="block hover:text-gold"
-            >About</router-link
-          >
-        </li>
-        <li>
-          <div
-            @click="toggleSubMenu('initiatives')"
-            class="flex justify-between items-center cursor-pointer"
-          >
-            Initiatives <span>▼</span>
+
+    <!-- Mobile Menu -->
+    <div v-if="showMobileMenu" class="md:hidden bg-white/90 backdrop-blur-lg shadow-lg p-6 rounded-b-md">
+      <ul class="flex flex-col gap-6 text-black font-semibold">
+        <router-link to="/" class="hover:text-yellow-400 transition">Home</router-link>
+        <router-link to="/about" class="hover:text-yellow-400 transition">About</router-link>
+
+        <!-- Mobile Initiatives Dropdown -->
+        <div>
+          <div @click="toggleSubMenu('initiatives')" class="flex justify-between items-center cursor-pointer">
+            Initiatives
+            <span>▼</span>
           </div>
-          <ul v-if="subMenu.initiatives" class="mt-2 space-y-2">
-            <li>
-              <router-link
-                to="/youth-development"
-                class="block px-4 py-2 hover:bg-gray-100"
-                >Youth Developement</router-link
-              >
-            </li>
-            <li>
-              <router-link
-                to="/orphans"
-                class="block px-4 py-2 hover:bg-gray-100"
-                >ORPHANS</router-link
-              >
-            </li>
-            <li>
-              <router-link
-                to="/widows"
-                class="block px-4 py-2 hover:bg-gray-100"
-                >WIDOWS</router-link
-              >
+          <ul v-if="subMenu.initiatives" class="pl-4 mt-2 space-y-2 text-gray-700">
+            <li v-for="item in initiativesLinks" :key="item.name">
+              <router-link :to="item.link" class="block hover:text-yellow-400">{{ item.name }}</router-link>
             </li>
           </ul>
-        </li>
-        <li>
-          <router-link to="/gallery" class="block hover:text-gold"
-            >Gallery</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/target-population" class="block hover:text-gold"
-            >Target Population</router-link
-          >
-        </li>
-        <li>
-          <router-link to="/impact" class="block hover:text-gold"
-            >Impact Stories</router-link
-          >
-        </li>
-        <li>
-          <div
-            @click="toggleSubMenu('blog')"
-            class="flex justify-between items-center cursor-pointer"
-          >
-            Blog <span>▼</span>
+        </div>
+
+        <router-link to="/gallery" class="hover:text-yellow-400 transition">Gallery</router-link>
+        <router-link to="/target-population" class="hover:text-yellow-400 transition">Target Population</router-link>
+        <router-link to="/impact" class="hover:text-yellow-400 transition">Impact Stories</router-link>
+
+        <!-- Mobile Blog Dropdown -->
+        <div>
+          <div @click="toggleSubMenu('blog')" class="flex justify-between items-center cursor-pointer">
+            Blog
+            <span>▼</span>
           </div>
-          <ul v-if="subMenu.blog" class="mt-2 space-y-6">
-            <li>
-              <router-link to="/jgf" class="block hover:text-gold"
-                >Jakari Global Foundation|What it entails?</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/currentevents" class="block hover:text-gold"
-                >CURRENT EVENTS</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/orphans" class="block hover:text-gold"
-                >WHY ORPHANS</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/youth-development" class="block hover:text-gold"
-                >WHY YOUTHS</router-link
-              >
-            </li>
-            <li>
-              <router-link to="/widows" class="block hover:text-gold"
-                >WHY WIDOWS</router-link
-              >
+          <ul v-if="subMenu.blog" class="pl-4 mt-2 space-y-2 text-gray-700">
+            <li v-for="item in blogLinks" :key="item.name">
+              <router-link :to="item.link" class="block hover:text-yellow-400">{{ item.name }}</router-link>
             </li>
           </ul>
-        </li>
-        <li>
-          <router-link to="/contact" class="block hover:text-gold"
-            >Contact</router-link
-          >
-        </li>
-        <li>
-          <router-link
-            to="/donate"
-            class="block bg-gold text-black px-4 py-2 rounded hover:bg-yellow-400"
-            >Donate</router-link
-          >
-        </li>
+        </div>
+
+        <router-link to="/contact" class="hover:text-yellow-400 transition">Contact</router-link>
+        <router-link to="/donate" class="bg-yellow-400 px-4 py-2 text-center rounded-full hover:bg-yellow-500 text-black transition">Donate</router-link>
       </ul>
     </div>
   </header>
@@ -242,14 +124,26 @@ import { ref } from "vue";
 const showMobileMenu = ref(false);
 const subMenu = ref({
   initiatives: false,
-  impact: false,
   blog: false,
 });
 const showDropdowns = ref({
   initiatives: false,
-  impact: false,
   blog: false,
 });
+
+const initiativesLinks = [
+  { name: "Youth Development", link: "/youth-development" },
+  { name: "Orphans", link: "/orphans" },
+  { name: "Widows", link: "/widows" },
+];
+
+const blogLinks = [
+  { name: "Jakari Global Foundation | What it entails?", link: "/jgf" },
+  { name: "Current Events", link: "/currentevents" },
+  { name: "Why Orphans?", link: "/orphans" },
+  { name: "Why Youths?", link: "/youth-development" },
+  { name: "Why Widows?", link: "/widows" },
+];
 
 const toggleMobileMenu = () => {
   showMobileMenu.value = !showMobileMenu.value;
@@ -264,4 +158,9 @@ const toggleDropdown = (dropdown) => {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+/* Smooth dropdown animation */
+ul[role="menu"] {
+  transition: all 0.3s ease;
+}
+</style>
