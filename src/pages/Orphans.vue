@@ -4,7 +4,7 @@
     <!-- Hero Section -->
     <section class="relative h-[500px] bg-cover bg-center flex items-center justify-center" style="background-image: url('https://img.freepik.com/free-photo/back-view-friends-outdoors_23-2149479928.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740');">
       <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-      <div class="relative text-center px-6 text-white animate-fade-in">
+      <div class="relative text-center px-6 text-white" v-scroll-animation="'animate-fade-in'">
         <h1 class="text-5xl font-bold leading-tight mb-4">Every Child Deserves a Future.</h1>
         <p class="text-xl max-w-2xl mx-auto leading-relaxed">
           Health. Education. Hope. We're here to make it possible.
@@ -17,7 +17,7 @@
 
     <!-- The Crisis Section -->
     <section class="py-20 bg-white">
-      <div class="container mx-auto px-6 text-center animate-slide-up">
+      <div class="container mx-auto px-6 text-center" v-scroll-animation="'animate-slide-up'">
         <h2 class="text-4xl font-bold text-gray-800 mb-8">The Crisis</h2>
         <p class="text-gray-600 max-w-4xl mx-auto leading-relaxed">
           Over 150 million orphaned children worldwide face daily threats from disease, hunger, lack of education, and emotional neglect. Every statistic represents a real child whose future hangs in the balance.
@@ -30,11 +30,11 @@
 
     <!-- Focus Areas Section -->
     <section class="py-20 bg-gray-100">
-      <div class="container mx-auto px-6 text-center animate-fade-in">
+      <div class="container mx-auto px-6 text-center" v-scroll-animation="'animate-fade-in'">
         <h2 class="text-4xl font-bold text-gray-800 mb-12">Our Focus Areas</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 
-          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition">
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition" v-scroll-animation="'animate-fade-in'">
             <font-awesome-icon :icon="['fas', 'book-open']" class="text-gold h-16 w-16 mb-4" />
             <h3 class="text-2xl font-bold mb-4 text-gray-800">Education</h3>
             <p class="text-gray-600">
@@ -42,7 +42,7 @@
             </p>
           </div>
 
-          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition">
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition" v-scroll-animation="'animate-fade-in'">
             <font-awesome-icon :icon="['fas', 'heartbeat']" class="text-gold h-16 w-16 mb-4" />
             <h3 class="text-2xl font-bold mb-4 text-gray-800">Health Care</h3>
             <p class="text-gray-600">
@@ -50,7 +50,7 @@
             </p>
           </div>
 
-          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition">
+          <div class="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition" v-scroll-animation="'animate-fade-in'">
             <font-awesome-icon :icon="['fas', 'hands-helping']" class="text-gold h-16 w-16 mb-4" />
             <h3 class="text-2xl font-bold mb-4 text-gray-800">Emotional Support</h3>
             <p class="text-gray-600">
@@ -64,11 +64,11 @@
 
     <!-- Current Projects Section -->
     <section class="py-20 bg-white">
-      <div class="container mx-auto px-6 text-center animate-slide-up">
+      <div class="container mx-auto px-6 text-center" v-scroll-animation="'animate-slide-up'">
         <h2 class="text-4xl font-bold text-gray-800 mb-12">Current Projects</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
 
-          <div class="bg-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+          <div class="bg-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition" v-scroll-animation="'animate-fade-in'">
             <img src='https://img.freepik.com/free-photo/close-up-african-kids-reading-together_23-2148860425.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740' alt="Operation Education Project" class="rounded-lg mb-6" />
             <h3 class="text-2xl font-bold mb-4 text-gray-800">Operation Education Project</h3>
             <p class="text-gray-600">
@@ -76,7 +76,7 @@
             </p>
           </div>
 
-          <div class="bg-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition">
+          <div class="bg-gray-100 p-8 rounded-lg shadow-md hover:shadow-xl transition" v-scroll-animation="'animate-fade-in'">
             <img src='https://img.freepik.com/free-photo/medic-patient-looking-human-body-analysis_482257-21552.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740' alt="HIV & AIDS Assistance" class="rounded-lg mb-6" />
             <h3 class="text-2xl font-bold mb-4 text-gray-800">HIV & AIDS Assistance Program</h3>
             <p class="text-gray-600">
@@ -86,14 +86,14 @@
 
         </div>
 
-        <router-link to="/contact" class="inline-block mt-10 bg-gold text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">
+        <router-link to="/projects" class="inline-block mt-10 bg-gold text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">
           See All Projects
         </router-link>
       </div>
     </section>
 
     <!-- Final Call to Action -->
-    <section class="py-20 bg-gray-900 text-white text-center animate-fade-in">
+    <section class="py-20 bg-gray-900 text-white text-center" v-scroll-animation="'animate-fade-in'">
       <div class="container mx-auto px-6">
         <h2 class="text-4xl font-bold mb-6">You Can Change a Life Today</h2>
         <p class="text-gray-300 mb-8 max-w-2xl mx-auto">
@@ -109,6 +109,7 @@
 </template>
 
 <script setup>
+// Only needed if you later want dynamic local images
 const getImagePath = (imageName) => {
   return new URL(`../assets/${imageName}`, import.meta.url).href;
 };
