@@ -1,116 +1,94 @@
 <template>
-    <div class="container mx-auto py-8">
-      <!-- Hero Section -->
-      <section class="hero-section relative text-white py-16 text-center">
-        <div class="absolute inset-0 bg-gray-800 bg-opacity-70"></div>
-        <div class="container relative mx-auto px-4">
-          <h1 class="text-4xl font-bold mb-4">Widow Support Programs</h1>
-          <p class="text-xl">
-            The challenges faced by widows worldwide are not just personal; they are societal.
-          </p>
-          <p class="mt-4 max-w-2xl mx-auto">
-            From access to healthcare to economic empowerment, millions of widows struggle daily to provide for their families and secure a better future.
-          </p>
-          <p class="mt-4 max-w-2xl mx-auto">
-            It's essential to remember that every statistic represents a woman facing immense difficulties, needing our support and solidarity.
-          </p>
-        </div>
-      </section>
-  
-      <!-- Health Section -->
-      <section class="py-8">
-        <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Our Health Initiatives</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Healthcare Access</h3>
-            <p class="text-gold font-semibold">Objective:</p>
-            <p class="text-gray-800 mb-4">
-              To improve access to healthcare services for widows, ensuring they receive necessary medical attention and support.
-            </p>
-            <h4 class="text-xl font-bold text-gray-800 mb-4">What we do</h4>
-            <p class="text-gray-800 mb-4">
-              We provide medical check-ups, health education, and access to essential medicines for widows and their families.
-            </p>
-            <img src="../assests/health3.jpeg" alt="Healthcare Access" class="w-full h-auto rounded-lg">
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h4 class="text-xl font-bold text-gray-800 mb-4">Impact and Future Goal</h4>
-            <p class="text-gray-800 mb-4">
-              We aim to extend our healthcare programs to reach more widows in remote areas, providing comprehensive health services and support.
-            </p>
-            <img src="../assests/health4.jpeg" alt="Healthcare Impact" class="w-full h-auto rounded-lg">
-            <router-link to="/contact" class="inline-block mt-4 bg-gold text-gray-800 px-4 py-2 rounded">Learn More</router-link>
-          </div>
-        </div>
-      </section>
-  
-      <!-- Economic Empowerment Section -->
-      <section class="py-8">
-        <h2 class="text-3xl font-bold text-gray-800 text-center mb-8">Economic Empowerment</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Skills Training and Microfinance</h3>
-            <p class="text-gold font-semibold">Objective:</p>
-            <p class="text-gray-800 mb-4">
-              To equip widows with the skills and financial support needed to start and sustain small businesses, promoting economic independence.
-            </p>
-            <h4 class="text-xl font-bold text-gray-800 mb-4">What we do</h4>
-            <p class="text-gray-800 mb-4">
-              We offer vocational training, financial literacy workshops, and access to microfinance programs to help widows build sustainable livelihoods.
-            </p>
-            <img src="../assests/empower.jpeg" alt="Economic Empowerment" class="w-full h-auto rounded-lg">
-          </div>
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h4 class="text-xl font-bold text-gray-800 mb-4">Impact and Future Goal</h4>
-            <p class="text-gray-800 mb-4">
-              Our goal is to expand our economic empowerment initiatives, providing more widows with the tools and resources they need to achieve financial stability.
-            </p>
-            <img src="../assests/empower1.jpeg" alt="Economic Impact" class="w-full h-auto rounded-lg">
-            <router-link to="/contact" class="inline-block mt-4 bg-gold text-gray-800 px-4 py-2 rounded">Learn More</router-link>
-          </div>
-        </div>
-      </section>
+  <div class="overflow-x-hidden">
+    <!-- Hero Section -->
+    <section class="relative h-[500px] bg-cover bg-center flex items-center justify-center" style="background-image: url('https://img.freepik.com/free-photo/portrait-african-woman-smiling_23-2149021395.jpg');">
+      <div class="absolute inset-0 bg-black bg-opacity-70"></div>
+      <div class="relative text-center text-white px-6" v-scroll-animation="'animate-fade-in'">
+        <h1 class="text-5xl font-bold leading-tight mb-4">Supporting Widows with Dignity</h1>
+        <p class="text-xl max-w-3xl mx-auto leading-relaxed">
+          Transforming hardship into hope through health, skills, and economic empowerment.
+        </p>
+        <router-link to="/contact" class="inline-block mt-6 bg-gold text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">
+          Get Involved
+        </router-link>
+      </div>
+    </section>
 
-    </div>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue';
-  
-  const sections = ref([
-    {
-      id: 1,
-      title: 'Healthcare Access',
-      objective: 'To improve access to healthcare services...',
-      whatWeDo: 'We provide medical check-ups, health education...',
-      impact: 'We aim to extend our healthcare programs...',
-      images: ['healthcare.jpg', 'healthcare-impact.jpg'],
-      link: '/healthcare-impact'
-    },
-    {
-      id: 2,
-      title: 'Skills Training and Microfinance',
-      objective: 'To equip widows with the skills and financial support...',
-      whatWeDo: 'We offer vocational training, financial literacy workshops...',
-      impact: 'Our goal is to expand our economic empowerment initiatives...',
-      images: ['economic-empowerment.jpg', 'economic-impact.jpg'],
-      link: '/economic-impact'
-    },
-  ]);
-  
-  const getImagePath = (imageName) => {
-    return new URL(`../assets/${imageName}`, import.meta.url).href;
-  };
-  </script>
-  
-  <style scoped>
-  .hero-section {
-    background: url('../assests/widows.jpeg') no-repeat center center;
-    background-size: cover;
-    height: 300px; /* Small part of the picture */
-  }
-  .bg-gold {
-    background-color: #FFD700;
-  }
-  </style>
-  
+    <!-- Health Programs Section -->
+    <section class="py-20 bg-gray-100">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-12" v-scroll-animation="'animate-slide-up'">Health Initiatives</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="bg-white p-8 rounded-lg shadow-md" v-scroll-animation="'animate-fade-in'">
+            <img src="https://img.freepik.com/free-photo/close-up-african-american-hand-holding-stethoscope_482257-19507.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740" alt="Healthcare" class="rounded-lg mb-6 w-full h-60 object-cover" />
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Healthcare Access</h3>
+            <p class="text-gray-600 mb-4">
+              We provide health education, check-ups, and access to affordable medications to support widows and their families in remote and underserved communities.
+            </p>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow-md" v-scroll-animation="'animate-fade-in'">
+            <img src="https://img.freepik.com/free-photo/flat-lay-heart-shaped-vegetable-arrangement_23-2148287517.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740"alt="Impact Healthcare" class="rounded-lg mb-6 w-full h-60 object-cover" />
+            <h3  class="text-2xl font-bold text-gray-800 mb-4">Impact & Future</h3>
+            <p class="text-gray-600 mb-4">
+              We aim to scale mobile medical units and local partnerships to increase our healthcare reach, ensuring every widow has access to essential services.
+            </p>
+            <router-link to="/contact" class="inline-block mt-4 bg-gold text-gray-900 font-bold px-6 py-2 rounded-full hover:bg-yellow-400 transition">
+              Learn More
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Economic Empowerment Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-gray-800 mb-12" v-scroll-animation="'animate-slide-up'">Empowering Widows Economically</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md" v-scroll-animation="'animate-fade-in'">
+            <img src="https://img.freepik.com/free-photo/front-view-woman-with-face-mask-market_23-2148777461.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740" alt="Training" class="rounded-lg mb-6 w-full h-60 object-cover" />
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Skills & Microfinance</h3>
+            <p class="text-gray-600 mb-4">
+              From tailoring and farming to entrepreneurship workshops and microloans — our programs are designed to uplift widows into self-reliance.
+            </p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md" v-scroll-animation="'animate-fade-in'">
+            <img src="https://img.freepik.com/free-photo/close-up-colleagues-shaking-hands_23-2149006876.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740" alt="Impact" class="rounded-lg mb-6 w-full h-60 object-cover" />
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">Long-term Impact</h3>
+            <p class="text-gray-600 mb-4">
+              Hundreds of widows have started income-generating activities through our programs. We're committed to reaching thousands more by 2026.
+            </p>
+            <router-link to="/contact" class="inline-block mt-4 bg-gold text-gray-900 font-bold px-6 py-2 rounded-full hover:bg-yellow-400 transition">
+              Learn More
+            </router-link>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</template>
+
+<script setup>
+// (optional: animations, logic, or dynamic loading goes here)
+</script>
+
+<style scoped>
+.bg-gold {
+  background-color: #FFD700;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease-out both;
+}
+.animate-slide-up {
+  animation: slideUp 1s ease-out both;
+}
+</style>

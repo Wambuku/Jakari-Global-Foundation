@@ -11,6 +11,7 @@ import CurrentEvents from "../pages/CurrentEvents.vue";
 import Orphans from '../pages/Orphans.vue';  
 import  Widows from "../pages/Widows.vue"
 import Contact from "../pages/Contact.vue";
+import Projects from "../pages/Project.vue";
 
 const routes = [
   { path: "/", component: Home },
@@ -24,7 +25,8 @@ const routes = [
   { path: "/jgf", component: JGF },
   { path: "/currentevents", component: CurrentEvents },
   { path: '/orphans', component: Orphans }, 
-  { path: '/widows', component: Widows }
+  { path: '/widows', component: Widows },
+  { path: '/projects', component: Projects }
 ];
 
 const router = createRouter({
