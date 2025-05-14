@@ -42,18 +42,8 @@
           <router-link to="/impact" class="hover:text-yellow-400 transition">Impact Stories</router-link>
         </li>
 
-        <!-- Blog Dropdown -->
-        <li class="relative group">
-          <button @click="toggleDropdown('blog')" class="flex items-center gap-1 hover:text-yellow-400 transition">
-            Blog
-            <span class="text-xs">▼</span>
-          </button>
-          <ul v-if="showDropdowns.blog" class="absolute top-10 left-0 bg-white text-black shadow-lg rounded-md py-2 w-64 space-y-1">
-            <li v-for="item in blogLinks" :key="item.name">
-              <router-link :to="item.link" class="block px-4 py-2 hover:bg-gray-100 transition">{{ item.name }}</router-link>
-            </li>
-          </ul>
-        </li>
+        <router-link to="/blog" class="block hover:text-yellow-400">Blogs</router-link>
+
 
         <li>
           <router-link to="/contact" class="hover:text-yellow-400 transition">Contact</router-link>
@@ -97,19 +87,8 @@
         <router-link to="/gallery" class="hover:text-yellow-400 transition">Gallery</router-link>
         <router-link to="/target-population" class="hover:text-yellow-400 transition">Target Population</router-link>
         <router-link to="/impact" class="hover:text-yellow-400 transition">Impact Stories</router-link>
-
-        <!-- Mobile Blog Dropdown -->
-        <div>
-          <div @click="toggleSubMenu('blog')" class="flex justify-between items-center cursor-pointer">
-            Blog
-            <span>▼</span>
-          </div>
-          <ul v-if="subMenu.blog" class="pl-4 mt-2 space-y-2 text-gray-700">
-            <li v-for="item in blogLinks" :key="item.name">
-              <router-link :to="item.link" class="block hover:text-yellow-400">{{ item.name }}</router-link>
-            </li>
-          </ul>
-        </div>
+        <router-link to="/blog" class="block hover:text-yellow-400">Blogs</router-link>
+        
 
         <router-link to="/contact" class="hover:text-yellow-400 transition">Contact</router-link>
         <router-link to="/donate" class="bg-yellow-400 px-4 py-2 text-center rounded-full hover:bg-yellow-500 text-black transition">Donate</router-link>
@@ -137,13 +116,7 @@ const initiativesLinks = [
   { name: "Widows", link: "/widows" },
 ];
 
-const blogLinks = [
-  { name: "Jakari Global Foundation | What it entails?", link: "/jgf" },
-  { name: "Current Events", link: "/currentevents" },
-  { name: "Why Orphans?", link: "/orphans" },
-  { name: "Why Youths?", link: "/youth-development" },
-  { name: "Why Widows?", link: "/widows" },
-];
+
 
 const toggleMobileMenu = () => {
   showMobileMenu.value = !showMobileMenu.value;
