@@ -6,8 +6,6 @@ import YouthDevelopment from "../pages/YouthDevelopment.vue";
 import Gallery from "../pages/Gallery.vue";
 import ImpactStories from "../pages/ImpactStories.vue";
 import Blog from "../pages/Blog.vue";
-import JGF from "../pages/JGF.vue";
-import CurrentEvents from "../pages/CurrentEvents.vue";
 import Orphans from '../pages/Orphans.vue';  
 import  Widows from "../pages/Widows.vue"
 import Contact from "../pages/Contact.vue";
@@ -29,8 +27,6 @@ const routes = [
   { path: "/impact", component: ImpactStories },
   { path: "/blog", component: Blog },
   { path: "/contact", component: Contact },
-  { path: "/jgf", component: JGF },
-  { path: "/currentevents", component: CurrentEvents },
   { path: '/orphans', component: Orphans }, 
   { path: '/widows', component: Widows },
   { path: '/projects', component: Projects },

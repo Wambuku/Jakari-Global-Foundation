@@ -12,9 +12,10 @@
           Empowering vulnerable populations through education, mentorship, and inclusive development across East Africa.
         </p>
         <p class="mt-4 text-sm">P.O. Box 2000100, Nairobi, Kenya</p>
-        <p class="text-sm">Phone: +254 701 425 677</p>
+        <p class="text-sm">Phone: +254 700 000 000
+      </p>
         <p class="text-sm">
-          Email: <a href="mailto:info@jakariglobal.org" class="hover:text-yellow-400 underline">info@jakariglobal.org</a>
+          Email: <a href="mailto:info@jakariglobal.org" class="hover:text-yellow-400 underline">info@jakarglobal.org</a>
         </p>
       </div>
 
@@ -83,7 +84,6 @@ const importantLinks = [
   { label: "About", link: "/about" },
   { label: "Gallery", link: "/gallery" },
   { label: "Impact Stories", link: "/impact" },
-  { label: "Initiatives", link: "/initiatives" },
   { label: "Blogs", link: "/blog" },
   
 ]
