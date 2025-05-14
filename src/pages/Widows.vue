@@ -1,40 +1,43 @@
 <template>
-  <div class="overflow-x-hidden">
+  <div class="overflow-x-hidden font-sans text-gray-800">
     <!-- Hero Section -->
-    <section class="relative h-[500px] bg-cover bg-center flex items-center justify-center" style="background-image: url('https://img.freepik.com/free-photo/portrait-african-woman-smiling_23-2149021395.jpg');">
-      <div class="absolute inset-0 bg-black bg-opacity-70"></div>
-      <div class="relative text-center text-white px-6" v-scroll-animation="'animate-fade-in'">
-        <h1 class="text-5xl font-bold leading-tight mb-4">Supporting Widows with Dignity</h1>
-        <p class="text-xl max-w-3xl mx-auto leading-relaxed">
-          Transforming hardship into hope through health, skills, and economic empowerment.
-        </p>
-        <router-link to="/contact" class="inline-block mt-6 bg-gold text-gray-900 font-bold px-8 py-3 rounded-full hover:bg-yellow-400 transition">
-          Get Involved
-        </router-link>
+    <section class="relative h-screen flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-yellow-100 to-yellow-300">
+      <div class="w-full md:w-1/2 h-full flex items-center justify-center p-10">
+        <div class="max-w-xl text-center md:text-left">
+          <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Dignity for Widows</h1>
+          <p class="text-lg md:text-xl text-gray-700 mb-6">
+            Transforming hardship into hope through health, skills, and economic empowerment.
+          </p>
+          <router-link to="/contact" class="inline-block bg-yellow-500 text-white font-semibold px-8 py-3 rounded-xl shadow hover:scale-105 transition-transform">
+            Get Involved
+          </router-link>
+        </div>
       </div>
+      <div class="w-full md:w-1/2 h-[500px] md:h-full bg-cover bg-center" style="background-image: url('https://img.freepik.com/free-photo/portrait-african-woman-smiling_23-2149021395.jpg');"></div>
     </section>
 
     <!-- Health Programs Section -->
-    <section class="py-20 bg-gray-100">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold text-gray-800 mb-12" v-scroll-animation="'animate-slide-up'">Health Initiatives</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div class="bg-white p-8 rounded-lg shadow-md" v-scroll-animation="'animate-fade-in'">
-            <img src="https://img.freepik.com/free-photo/close-up-african-american-hand-holding-stethoscope_482257-19507.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740" alt="Healthcare" class="rounded-lg mb-6 w-full h-60 object-cover" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Healthcare Access</h3>
-            <p class="text-gray-600 mb-4">
-              We provide health education, check-ups, and access to affordable medications to support widows and their families in remote and underserved communities.
-            </p>
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Health Initiatives</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="flex gap-6 items-start bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+            <img src="https://img.freepik.com/free-photo/close-up-african-american-hand-holding-stethoscope_482257-19507.jpg" alt="Healthcare Access" class="w-32 h-32 rounded-xl object-cover" />
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Healthcare Access</h3>
+              <p class="text-gray-600 text-sm">
+                Health education, check-ups, and affordable medications for widows in remote communities.
+              </p>
+            </div>
           </div>
-          <div class="bg-white p-8 rounded-lg shadow-md" v-scroll-animation="'animate-fade-in'">
-            <img src="https://img.freepik.com/free-photo/flat-lay-heart-shaped-vegetable-arrangement_23-2148287517.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740"alt="Impact Healthcare" class="rounded-lg mb-6 w-full h-60 object-cover" />
-            <h3  class="text-2xl font-bold text-gray-800 mb-4">Impact & Future</h3>
-            <p class="text-gray-600 mb-4">
-              We aim to scale mobile medical units and local partnerships to increase our healthcare reach, ensuring every widow has access to essential services.
-            </p>
-            <router-link to="/contact" class="inline-block mt-4 bg-gold text-gray-900 font-bold px-6 py-2 rounded-full hover:bg-yellow-400 transition">
-              Learn More
-            </router-link>
+          <div class="flex gap-6 items-start bg-white p-6 rounded-2xl shadow-md hover:shadow-xl transition">
+            <img src="https://img.freepik.com/free-photo/flat-lay-heart-shaped-vegetable-arrangement_23-2148287517.jpg" alt="Impact & Future" class="w-32 h-32 rounded-xl object-cover" />
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Impact & Future</h3>
+              <p class="text-gray-600 text-sm">
+                Expanding mobile medical units and partnerships to ensure essential healthcare for every widow.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -42,53 +45,36 @@
 
     <!-- Economic Empowerment Section -->
     <section class="py-20 bg-white">
-      <div class="container mx-auto px-6 text-center">
-        <h2 class="text-4xl font-bold text-gray-800 mb-12" v-scroll-animation="'animate-slide-up'">Empowering Widows Economically</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div class="bg-gray-50 p-8 rounded-lg shadow-md" v-scroll-animation="'animate-fade-in'">
-            <img src="https://img.freepik.com/free-photo/front-view-woman-with-face-mask-market_23-2148777461.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740" alt="Training" class="rounded-lg mb-6 w-full h-60 object-cover" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Skills & Microfinance</h3>
-            <p class="text-gray-600 mb-4">
-              From tailoring and farming to entrepreneurship workshops and microloans — our programs are designed to uplift widows into self-reliance.
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center mb-12">Empowering Widows Economically</h2>
+        <div class="grid md:grid-cols-2 gap-10">
+          <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-8 rounded-2xl shadow-md">
+            <h3 class="text-2xl font-semibold mb-4">Skills & Microfinance</h3>
+            <p class="text-gray-700 mb-6">
+              Tailoring, farming, entrepreneurship workshops, and microloans to uplift widows into self-reliance.
             </p>
+            <router-link to="/contact" class="inline-block border border-yellow-500 text-yellow-500 font-medium px-6 py-2 rounded-full hover:bg-yellow-500 hover:text-white transition">
+              Learn More
+            </router-link>
           </div>
-          <div class="bg-gray-50 p-8 rounded-lg shadow-md" v-scroll-animation="'animate-fade-in'">
-            <img src="https://img.freepik.com/free-photo/close-up-colleagues-shaking-hands_23-2149006876.jpg?ga=GA1.1.342046830.1745838061&semt=ais_hybrid&w=740" alt="Impact" class="rounded-lg mb-6 w-full h-60 object-cover" />
-            <h3 class="text-2xl font-bold text-gray-800 mb-4">Long-term Impact</h3>
-            <p class="text-gray-600 mb-4">
-              Hundreds of widows have started income-generating activities through our programs. We're committed to reaching thousands more by 2026.
+          <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-8 rounded-2xl shadow-md">
+            <h3 class="text-2xl font-semibold mb-4">Long-term Impact</h3>
+            <p class="text-gray-700 mb-6">
+              Hundreds of widows empowered with income-generating activities. Our goal is to impact thousands by 2026.
             </p>
-            <router-link to="/contact" class="inline-block mt-4 bg-gold text-gray-900 font-bold px-6 py-2 rounded-full hover:bg-yellow-400 transition">
+            <router-link to="/contact" class="inline-block border border-yellow-500 text-yellow-500 font-medium px-6 py-2 rounded-full hover:bg-yellow-500 hover:text-white transition">
               Learn More
             </router-link>
           </div>
         </div>
       </div>
     </section>
-
   </div>
 </template>
 
 <script setup>
-// (optional: animations, logic, or dynamic loading goes here)
+// Minimal scripting required for this layout.
 </script>
 
 <style scoped>
-.bg-gold {
-  background-color: #FFD700;
-}
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-@keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-.animate-fade-in {
-  animation: fadeIn 1s ease-out both;
-}
-.animate-slide-up {
-  animation: slideUp 1s ease-out both;
-}
 </style>

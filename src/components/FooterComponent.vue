@@ -1,13 +1,6 @@
 <template>
   <footer class="bg-gray-900 text-gray-300 pt-20 pb-8 relative">
 
-    <!-- CTA Top Bar -->
-    <div class="bg-yellow-400 text-black text-center py-10">
-      <h2 class="text-3xl font-bold mb-4">Support A Dignified Future</h2>
-      <router-link to="/contact" class="inline-block bg-black text-yellow-400 px-8 py-3 rounded-full hover:bg-white hover:text-black transition">
-        Partner With Us
-      </router-link>
-    </div>
 
     <!-- Main Footer -->
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 px-6 mt-16">
