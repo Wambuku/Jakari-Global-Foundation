@@ -1,45 +1,51 @@
 <template>
-  <div class="container mx-auto py-8">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+  <div class="container mx-auto py-16 px-6 text-white">
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div
         v-for="(story, index) in stories"
         :key="index"
-        class="relative group"
+        class="relative rounded-xl overflow-hidden shadow-lg group hover:-translate-y-2 transition-transform duration-300"
       >
         <img
           :src="getImagePath(story.image)"
           :alt="story.title"
           class="w-full h-64 object-cover"
         />
-        <div
-          class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center"
-        >
-          <div class="text-center text-white p-4 bg-opacity-70 rounded-lg">
-            <h3 class="text-2xl font-bold">{{ story.title }}</h3>
-            <p class="mt-4">{{ story.description }}</p>
+
+        <!-- Glass Overlay -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm flex items-end p-6 transition-opacity group-hover:opacity-100">
+          <div class="w-full">
+            <h3 class="text-xl font-bold mb-2">{{ story.title }}</h3>
+            <p class="text-sm text-gray-300">{{ story.description }}</p>
             <button
               @click="showDetail(index)"
-              class="mt-4 bg-gray-800 text-gold px-4 py-2 rounded"
+              class="mt-4 inline-block bg-gradient-to-r from-yellow-400 to-yellow-500 text-gray-900 font-semibold px-4 py-2 rounded-full shadow hover:scale-105 transition"
             >
-              More
+              Read More
             </button>
           </div>
         </div>
-        <div
-          v-if="detailIndex === index"
-          class="absolute inset-0 bg-gold p-8 rounded-lg shadow-lg flex flex-col"
-        >
-          <button
-            @click="closeDetail"
-            class="self-end bg-gray-800 text-white p-2 rounded-full"
+
+        <!-- Detail Slide Over -->
+        <transition name="slide-fade">
+          <div
+            v-if="detailIndex === index"
+            class="absolute inset-0 bg-white text-gray-900 p-8 rounded-xl shadow-2xl flex flex-col z-20 animate-slide-up"
           >
-            &times;
-          </button>
-          <h3 class="text-2xl font-bold text-gray-800">{{ story.title }}</h3>
-          <p class="mt-4 text-gray-800 text-wrap">{{ story.detail }}</p>
-        </div>
+            <button
+              @click="closeDetail"
+              class="self-end bg-gray-800 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-600 transition"
+            >
+              &times;
+            </button>
+            <h3 class="text-2xl font-bold mt-4">{{ story.title }}</h3>
+            <p class="mt-4 text-gray-700 leading-relaxed">{{ story.detail }}</p>
+          </div>
+        </transition>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -50,48 +56,38 @@ const stories = ref([
   {
     image: "impact1.jpeg",
     title: "Data To Drive Impact",
-    description:
-      "Levearing the latest in data analytics and business intelligence tools to measure and inform impact in cities..",
-    detail:
-      "A project exploring how the non-profit sector can use and understand data to make cities look more like playgrounds in the same way that other private sector companies use information to propel their business.",
+    description: "Leveraging data analytics to inform community change.",
+    detail: "A project exploring how the non-profit sector can use data to transform urban spaces, much like how businesses use data to propel their strategies.",
   },
   {
     image: "home2.jpeg",
     title: "Charity To Change",
-    description:
-      "Engaging churches and church networks in reimagining how congregations can invest in long-term community change.",
-    detail:
-      "The faith community is a potential force for massive social change – yet it is often fragmented, operating in silos, and desperately needing to align and integrate its efforts with the wider community. ",
+    description: "Empowering churches to invest in community growth.",
+    detail: "The faith community holds massive potential for social change but needs cohesive strategies to align efforts with wider societal needs.",
   },
   {
     image: "impact2.jpeg",
-    title: "PARTNER IN CHANGE",
-    description: "Enabling personal, social, and economic upward mobility.",
-    detail:
-      "Partners in Change pairs trained volunteer coaches with adults who are pursuing tangible goals for moving beyond difficult financial constraints or living situations.",
+    title: "Partner In Change",
+    description: "Facilitating upward social mobility.",
+    detail: "Partners in Change pairs volunteer coaches with individuals seeking to overcome financial and social barriers through guided mentorship.",
   },
   {
     image: "impact3.jpeg",
-    title: "Propel Leadership Prosect",
-    description:
-      "Leveraging our diverse network to create a model for increasing the number of people of color in leadership positions in the non-profit sector. ",
-    detail:
-      "The project will address the underrepresentation of executives of color in the nonprofit sector by building a learning cohort of faith-based nonprofit organizations...",
+    title: "Propel Leadership Project",
+    description: "Increasing diversity in non-profit leadership.",
+    detail: "A model initiative aimed at addressing the lack of executives of color by building learning cohorts within faith-based organizations.",
   },
   {
     image: "impact4.jpeg",
     title: "Hands And Feet United",
-    description: "Mobilizing churches to work together across communities",
-    detail:
-      "The Hands and Feet United platform seeks to partner urban, suburban and rural churches to address issues while building a relational network.",
+    description: "Connecting churches across communities.",
+    detail: "An initiative to foster collaborations between urban, suburban, and rural churches to address local issues through joint efforts.",
   },
   {
     image: "impact5.jpeg",
     title: "Program Replication",
-    description:
-      "Operationalizing the replication of best in class programs in order to  inform our collective knowledge of how fundamental social problems can be solved.",
-    detail:
-      "Each of the 188 initiatives within the LF network grew out of a specific context with unique relationships, leaders, partners, funding, training, recipients, and other factors.",
+    description: "Scaling best-in-class programs for wider impact.",
+    detail: "Documenting and replicating successful programs across different contexts to tackle fundamental social challenges more effectively.",
   },
 ]);
 
@@ -111,7 +107,20 @@ const getImagePath = (imageName) => {
 </script>
 
 <style scoped>
-.bg-gold {
-  background-color: #ffd700;
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+.slide-fade-enter-active,
+.slide-fade-leave-active {
+  transition: opacity 0.5s, transform 0.5s;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
 }
 </style>
