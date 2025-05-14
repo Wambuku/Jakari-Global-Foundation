@@ -75,64 +75,61 @@
 
 
     <!-- Building a Movement Section -->
-    <section class="bg-white py-24 px-6">
-    <div class="container mx-auto text-center max-w-4xl">
-      <h2 class="text-4xl font-bold text-gray-800 mb-6">We’re Building a Movement</h2>
-      <p class="text-gray-600 text-lg leading-relaxed mb-12">
+    <section class="relative bg-gradient-to-br from-white via-gray-50 to-white py-24 px-6">
+  <div class="container mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <!-- Left Content -->
+    <div class="space-y-6">
+      <h2 class="text-5xl font-extrabold text-gray-800 leading-tight">We’re <span class="text-yellow-500">Building a Movement</span></h2>
+      <p class="text-gray-600 text-lg leading-relaxed">
         Through our programs, we empower youth and build strong communities both locally and globally.
       </p>
+      <router-link to="/target-population" class="inline-block bg-yellow-400 text-black px-6 py-3 rounded-full hover:bg-yellow-500 transition">
+        Get Involved
+      </router-link>
+    </div>
 
-      <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-        <!-- Card 1 -->
-        <div class="group relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.01]">
-          <img
-            src="https://cdn.pixabay.com/photo/2020/06/15/16/53/hands-5302566_640.jpg"
-            alt="Our Approach"
-            class="w-full h-64 object-cover"
-          />
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-6 text-center">
-            <h3 class="text-2xl font-bold">Our Approach</h3>
-            <p class="text-sm mt-3">
-              Since 2015, we have provided mentorship and built capacity for youth across 30+ cities worldwide.
-            </p>
-            <router-link to="/target-population" class="mt-4 inline-block bg-gold text-black px-5 py-2 rounded-full hover:bg-yellow-400 transition">Meet the Network</router-link>
-          </div>
+    <!-- Right Vertical Cards -->
+    <div class="space-y-8">
+      <!-- Card 1 -->
+      <div class="group relative bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition p-6 flex items-start gap-5">
+        <img src="https://cdn.pixabay.com/photo/2020/06/15/16/53/hands-5302566_640.jpg" alt="Our Approach" class="h-24 w-24 object-cover rounded-lg shadow-md shrink-0" />
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-yellow-500">Our Approach</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Since 2015, we have provided mentorship and built capacity for youth across 30+ cities worldwide.
+          </p>
+          <router-link to="/target-population" class="inline-block mt-3 text-sm font-medium text-yellow-500 hover:underline">Meet the Network →</router-link>
         </div>
+      </div>
 
-        <!-- Card 2 -->
-        <div class="group relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.01]">
-          <img
-            src="https://cdn.pixabay.com/photo/2013/02/21/10/21/architecture-84183_640.jpg"
-            alt="Our Impact"
-            class="w-full h-64 object-cover"
-          />
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-6 text-center">
-            <h3 class="text-2xl font-bold">Our Impact</h3>
-            <p class="text-sm mt-3">
-              Thousands of lives changed globally through education, mentoring, and building a resilient future.
-            </p>
-            <router-link to="/impact" class="mt-4 inline-block bg-gold text-black px-5 py-2 rounded-full hover:bg-yellow-400 transition">See Our Impact</router-link>
-          </div>
+      <!-- Card 2 -->
+      <div class="group relative bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition p-6 flex items-start gap-5">
+        <img src="https://cdn.pixabay.com/photo/2013/02/21/10/21/architecture-84183_640.jpg" alt="Our Impact" class="h-24 w-24 object-cover rounded-lg shadow-md shrink-0" />
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-yellow-500">Our Impact</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Thousands of lives changed globally through education, mentoring, and building a resilient future.
+          </p>
+          <router-link to="/impact" class="inline-block mt-3 text-sm font-medium text-yellow-500 hover:underline">See Our Impact →</router-link>
         </div>
+      </div>
 
-        <!-- Card 3 --> 
-        <div class="group relative overflow-hidden rounded-xl shadow-md transition-transform duration-300 hover:scale-[1.01]">
-          <img
-            src="https://cdn.pixabay.com/photo/2016/12/19/10/16/hands-1917895_640.png"
-            alt="Our Community"
-            class="w-full h-64 object-cover"
-          />
-          <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white p-6 text-center">
-            <h3 class="text-2xl font-bold">Our Community</h3>
-            <p class="text-sm mt-3">
-              Join a network of passionate individuals and organizations committed to making a difference.
-            </p>
-            <router-link to="/community" class="mt-4 inline-block bg-gold text-black px-5 py-2 rounded-full hover:bg-yellow-400 transition">Join Us</router-link>
-          </div>
+      <!-- Card 3 -->
+      <div class="group relative bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition p-6 flex items-start gap-5">
+        <img src="https://cdn.pixabay.com/photo/2016/12/19/10/16/hands-1917895_640.png" alt="Our Community" class="h-24 w-24 object-cover rounded-lg shadow-md shrink-0" />
+        <div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-2 group-hover:text-yellow-500">Our Community</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Join a network of passionate individuals and organizations committed to making a difference.
+          </p>
+          <router-link to="/community" class="inline-block mt-3 text-sm font-medium text-yellow-500 hover:underline">Join Us →</router-link>
         </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
 
     <!-- Creating Lasting Change Section -->
