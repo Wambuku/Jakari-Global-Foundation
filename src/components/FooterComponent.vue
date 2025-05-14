@@ -84,7 +84,7 @@ const importantLinks = [
   { label: "Gallery", link: "/gallery" },
   { label: "Impact Stories", link: "/impact" },
   { label: "Initiatives", link: "/initiatives" },
-  { label: "Blogs", link: "/blogs" },
+  { label: "Blogs", link: "/blog" },
   
 ]
 </script>
